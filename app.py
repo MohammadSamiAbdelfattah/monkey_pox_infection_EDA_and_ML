@@ -2,26 +2,6 @@ import streamlit as st
 import pickle
 import numpy as np
 import json
-from streamlit_lottie import st_lottie
-
-# Animation
-def load_lottiefile(filepath: str):
-    with open(filepath, "r") as f:
-        return json.load(f)
-
-lottie_animation = load_lottiefile("virus.json")
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.write(" ")
-
-with col2:
-    st_lottie(lottie_animation,speed=1, loop= True, quality= "low")
-
-with col3:
-    st.write(" ")
-
 
 # Title and Info
 st.markdown("<h2 style='text-align: center; color: black;'>Prediction of Monkey Pox Infection</h2>", unsafe_allow_html=True)
